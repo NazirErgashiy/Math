@@ -1,4 +1,4 @@
-package org.example;
+package mathFunctions;
 
 import java.util.*;
 import java.util.stream.Collectors;

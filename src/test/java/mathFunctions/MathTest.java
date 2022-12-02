@@ -1,4 +1,4 @@
-package org.example;
+package mathFunctions;
 
 import org.junit.Before;
 import org.junit.Test;
