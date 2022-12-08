@@ -6,7 +6,16 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+/**
+ * class Commons contains other functions
+ */
 public class Commons {
+    /**
+     * Returns 2 minimal integer in array
+     *
+     * @param arr input array with 2 and more elements in
+     * @return arr with 2 elements which contains 2 minimal integers
+     */
     public int[] findTwoMinElements(int[] arr) {
         if (arr == null || arr.length < 2) {
             throw new IllegalArgumentException("В массиве должно быть минимум 2 элемента!");
@@ -15,6 +24,12 @@ public class Commons {
         return new int[]{arr[0], arr[1]};
     }
 
+    /**
+     * Returns 2 minimal integer in array (no using Arrays.sort)
+     *
+     * @param arr input array with 2 and more elements in
+     * @return arr with 2 elements which contains 2 minimal integers
+     */
     public int[] findTwoMinElementsCustom(int[] arr) {
         if (arr == null || arr.length < 2) {
             throw new IllegalArgumentException("В массиве должно быть минимум 2 элемента!");
@@ -38,6 +53,9 @@ public class Commons {
         return new int[]{arr[0], arr[1]};
     }
 
+    /**
+     * Node class which realizes LinkedList
+     */
     public static class Node {
         Integer value;
         Node next;
@@ -52,6 +70,12 @@ public class Commons {
         }
     }
 
+    /**
+     * Return reversed Node
+     *
+     * @param node
+     * @return
+     */
     public static Node reverseLinkedList(Node node) {
         if (node == null) {
             return node;
@@ -68,6 +92,15 @@ public class Commons {
         return previousNode;
     }
 
+    /**
+     * Check brackets correctness
+     * @param str input string
+     * @return boolean if brackets order is correct returns true
+     * example{
+     * str = "({<>})"
+     * return boolean = true
+     * }
+     */
     public boolean checkBracketsCorrectness(String str) {
         char[] strInChars = str.toCharArray();
         char[] symbolBracketsOpen = new char[]{'{', '<', '['};
@@ -112,6 +145,12 @@ public class Commons {
         return allEqual;
     }
 
+    /**
+     * Finds maximum number of users which watched stream
+     * @param t_in user started watching stream
+     * @param t_out user leaved stream
+     * @return integer peak of stream watchers
+     */
     public int maximumNumberOfUsers(int[] t_in, int[] t_out) {
         if (t_in.length != t_out.length) {
             throw new IllegalArgumentException("Длина массивов должна быть одинаковой!");
@@ -138,6 +177,12 @@ public class Commons {
         return max;
     }
 
+    /**
+     * Compares Lists
+     * @param first
+     * @param second
+     * @return boolean if second List contains same character as first returns true (also number of same characters is counting)
+     */
     public boolean isContainsSameCharacters(List<Character> first, List<Character> second) {
         List<Character> s = new ArrayList<>(second.size());
         s.addAll(second);

@@ -3,11 +3,20 @@ package mathFunctions;
 import java.util.*;
 import java.util.stream.Collectors;
 
+/**
+ * This Math class has a basic math functions
+ */
 public class Math {
 
     private Map<Long, Long> factorialMap = new HashMap();
     private Map<Long, Long> fibonacciMap = new HashMap();
 
+    /**
+     * Basic factorial function
+     *
+     * @param n is input
+     * @return is factorial of n
+     */
     public long factorial(long n) {
         if (n < 0) {
             throw new IllegalArgumentException("Ожидается положительный параметр!");
@@ -27,6 +36,12 @@ public class Math {
         return result;
     }
 
+    /**
+     * Fibonacci function
+     *
+     * @param n is input
+     * @return is result of fibonacci function
+     */
     public long fibonacci(long n) {
         if (n < 0) {
             throw new IllegalArgumentException("Ожидается положительный параметр!");
@@ -48,6 +63,14 @@ public class Math {
         return num2;
     }
 
+    /**
+     * Can we build a Triangle
+     *
+     * @param a length of the first side of Triangle
+     * @param b length of the second side of Triangle
+     * @param c length of the third side of Triangle
+     * @return boolean if true we can build triangle with these sides
+     */
     public boolean isTriangle(double a, double b, double c) {
         if (a <= 0 || b <= 0 || c <= 0) {
             return false;
@@ -60,6 +83,15 @@ public class Math {
         return false;
     }
 
+    /**
+     * read the same in both directions
+     * @param str input string
+     * @return boolean
+     * example{
+     * Anna -> true
+     * Law -> false
+     * }
+     */
     public boolean isPalindrome(String str) {
 
         if (str == null) {
@@ -77,6 +109,11 @@ public class Math {
         return true;
     }
 
+    /**
+     * squared array
+     * @param arr input integers
+     * @return arr²
+     */
     public int[] powerOfTwo(int[] arr) {
         int[] tempArr = new int[arr.length];
         for (int i = 0; i < arr.length; i++) {
@@ -88,6 +125,11 @@ public class Math {
         return tempArr;
     }
 
+    /**
+     * squared array using streamAPI
+     * @param arr input integers
+     * @return arr²
+     */
     public Integer[] powerOfTwoStream(int[] arr) {
         return Arrays.stream(arr)
                 .boxed()
