@@ -14,7 +14,7 @@
 + Contains different functions
 + [Code location](src\main\java\mathFunctions\Commons.java)
 
-### List of Functions (Math.java)
+### List of Functions (Commons.java)
 1. findTwoMinElements returns array with 2 minimal integers
 2. findTwoMinElementsCustom same as 1st function (without using Arrays.sort())
 3. Class Node realizes linked list
