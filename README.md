@@ -1,3 +1,5 @@
+[![Java CI with Maven](https://github.com/NazirErgashiy/Math/actions/workflows/maven.yml/badge.svg)](https://github.com/NazirErgashiy/Math/actions/workflows/maven.yml)
+
 # Math.java
 + Contains mathematical formulas
 + [Code location](src/main/java/mathFunctions/Math.java)
@@ -12,7 +14,7 @@
 
 # Commons.java
 + Contains different functions
-+ [Code location](src\main\java\mathFunctions\Commons.java)
++ [Code location](src/main/java/mathFunctions/Commons.java)
 
 ### List of Functions (Commons.java)
 1. findTwoMinElements returns array with 2 minimal integers
