@@ -1,18 +1,2 @@
-name: API workflow
-
-on: [push, pull_request]
-
-jobs:
-  build:
-    runs-on: windows-latest
-    name: Test java API
-    steps:
-      - uses: actions/checkout@v3
-      - name: Upload coverage reports to Codecov
-        run: |
-          # Replace `linux` below with the appropriate OS
-          # Options are `alpine`, `linux`, `macos`, `windows`
-          $ProgressPreference = 'SilentlyContinue'
-          Invoke-WebRequest -Uri https://uploader.codecov.io/latest/windows/codecov.exe 
-          -Outfile codecov.exe
-           .\codecov.exe -t ${bbb1fcff-c458-4051-9aee-fd9634adf8ef}
+- name: Codecov
+  uses: codecov/codecov-action@v3.1.1
