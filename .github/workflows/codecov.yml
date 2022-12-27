@@ -8,8 +8,6 @@ jobs:
     name: Test java API
     steps:
       - uses: actions/checkout@v3
-      - name: Install requirements
-        run: pip install -r requirements.txt
       - name: Run tests and collect coverage
         run: javatest --cov .
       - name: Upload coverage reports to Codecov
