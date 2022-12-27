@@ -8,7 +8,6 @@ jobs:
     name: Test java API
     steps:
       - uses: actions/checkout@v3
-      - name: Run tests and collect coverage
       - name: Upload coverage reports to Codecov
         run: |
           # Replace `linux` below with the appropriate OS
