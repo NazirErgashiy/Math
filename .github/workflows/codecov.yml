@@ -9,11 +9,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Run tests and collect coverage
-        run: javatest --cov .
       - name: Upload coverage reports to Codecov
         run: |
           # Replace `linux` below with the appropriate OS
           # Options are `alpine`, `linux`, `macos`, `windows`
           $ProgressPreference = 'SilentlyContinue'
-          Invoke-WebRequest -Uri https://uploader.codecov.io/latest/windows/codecov.exe -Outfile codecov.exe
-          .\codecov.exe
+          Invoke-WebRequest -Uri https://uploader.codecov.io/latest/windows/codecov.exe 
+          -Outfile codecov.exe
+           .\codecov.exe -t ${bbb1fcff-c458-4051-9aee-fd9634adf8ef}
