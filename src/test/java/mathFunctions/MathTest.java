@@ -24,9 +24,11 @@ public class MathTest {
 
     @Test
     public void factorial() {
+        assertThat(math.factorial(0), is(1L));
         assertThat(math.factorial(1), is(1L));
         assertThat(math.factorial(2), is(2L));
         assertThat(math.factorial(3), is(6L));
+        assertThat(math.factorial(5), is(120L));
         assertThat(math.factorial(5), is(120L));
     }
 
@@ -51,6 +53,7 @@ public class MathTest {
         assertThat(math.fibonacci(7), is(13L));
         assertThat(math.fibonacci(8), is(21L));
         assertThat(math.fibonacci(9), is(34L));
+        assertThat(math.fibonacci(10), is(55L));
         assertThat(math.fibonacci(10), is(55L));
     }
 
@@ -148,6 +151,8 @@ public class MathTest {
         assertThat(math.isTriangle(-5, 9, 8), is(false));
         assertThat(math.isTriangle(5, -9, 8), is(false));
         assertThat(math.isTriangle(5, 9, -8), is(false));
+        assertThat(math.isTriangle(10, 3, 7), is(false));
+
     }
 
     @Test
@@ -164,6 +169,15 @@ public class MathTest {
         assertThat(math.powerOfTwoStream(test), is(result));
     }
 
+    @Test
+    public void reverseLinkedListNull() {
+        var node1 = new Commons.Node(null);
+
+        Commons.Node result = Commons.reverseLinkedList(node1);
+
+        assertThat(result.value, is(nullValue()));
+        assertThat(result.next, nullValue());
+    }
 
     @Test
     public void reverseLinkedListOneItem() {
