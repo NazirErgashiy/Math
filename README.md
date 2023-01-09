@@ -1,4 +1,4 @@
-[![Java CI with Maven](https://github.com/NazirErgashiy/Math/actions/workflows/maven.yml/badge.svg)](https://github.com/NazirErgashiy/Math/actions/workflows/maven.yml)
+[![Java CI with Maven](https://github.com/NazirErgashiy/Math/actions/workflows/maven.yml/badge.svg?event=push)](https://github.com/NazirErgashiy/Math/actions/workflows/maven.yml)
 
 ### List of Functions (Math.java)
 1. factorial **_Wikipedia_** link https://en.wikipedia.org/wiki/Factorial
