@@ -1,9 +1,5 @@
 [![Java CI with Maven](https://github.com/NazirErgashiy/Math/actions/workflows/maven.yml/badge.svg)](https://github.com/NazirErgashiy/Math/actions/workflows/maven.yml)
 
-# Math.java
-+ Contains mathematical formulas
-+ [Code location](src/main/java/mathFunctions/Math.java)
-
 ### List of Functions (Math.java)
 1. factorial **_Wikipedia_** link https://en.wikipedia.org/wiki/Factorial
 2. fibonacci **_Cuemath_** link https://www.cuemath.com/numbers/fibonacci-sequence/
@@ -11,10 +7,8 @@
 4. isPalindrome **_Wikipedia_** link https://en.wikipedia.org/wiki/Palindrome
 5. powerOfTwo **_Wikipedia_** link https://en.wikipedia.org/wiki/Power_of_two
 6. powerOfTwoStream doing same as 5th function (but using stream API)
+7. [Code location](src/main/java/mathFunctions/Math.java)
 
-# Commons.java
-+ Contains different functions
-+ [Code location](src/main/java/mathFunctions/Commons.java)
 
 ### List of Functions (Commons.java)
 1. findTwoMinElements returns array with 2 minimal integers
@@ -24,3 +18,4 @@
 5. checkBracketsCorrectness returns true if <{()}> else <}>(
 6. maximumNumberOfUsers finds maximum number of users which watched stream
 7. isContainsSameCharacters compares two lists 
+8. [Code location](src/main/java/mathFunctions/Commons.java)
