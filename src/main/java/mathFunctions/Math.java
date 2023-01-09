@@ -34,7 +34,7 @@ public class Math {
         }
         factorialMap.put(n, result);
         return result;
-    }a
+    }
     /**
      * Fibonacci function
      *
