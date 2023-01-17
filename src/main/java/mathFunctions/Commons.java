@@ -94,6 +94,7 @@ public class Commons {
 
     /**
      * Check brackets correctness
+     *
      * @param str input string
      * @return boolean if brackets order is correct returns true
      * example{
@@ -147,7 +148,8 @@ public class Commons {
 
     /**
      * Finds maximum number of users which watched stream
-     * @param t_in user started watching stream
+     *
+     * @param t_in  user started watching stream
      * @param t_out user leaved stream
      * @return integer peak of stream watchers
      */
@@ -179,6 +181,7 @@ public class Commons {
 
     /**
      * Compares Lists
+     *
      * @param first
      * @param second
      * @return boolean if second List contains same character as first returns true (also number of same characters is counting)
@@ -195,5 +198,80 @@ public class Commons {
             }
         }
         return true;
+    }
+
+    /**
+     * Sorting Array
+     *
+     * @param arr
+     * @return sorted arr
+     * @throws ArrayIndexOutOfBoundsException
+     */
+    public int[] bubbleSort(int[] arr) throws ArrayIndexOutOfBoundsException {
+        int[] matchArr = new int[]{};
+
+        for (int i = 0; true; i++) {
+            try {
+                int current = arr[i];
+                int next = arr[i + 1];
+                if (current > next) {
+                    arr[i] = next;
+                    arr[i + 1] = current;
+                }
+            } catch (ArrayIndexOutOfBoundsException exception) {
+                i = -1;
+                if (matchArr == arr) {
+                    break;
+                }
+                matchArr = arr;
+            }
+        }
+        return arr;
+    }
+
+    /**
+     * Sorting Array
+     *
+     * @param arr
+     * @return sorted arr
+     */
+    public int[] selectionSort(int[] arr) {
+
+        int minPos = 0;
+        int minValue = 0;
+        for (int i = 0; i < arr.length - 1; i++) {
+
+            boolean changes = false;
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[j] < arr[i]) {
+                    minValue = arr[j];
+                    minPos = j;
+                    changes = true;
+                }
+                if (j == arr.length - 1 && changes == true) {
+                    arr[minPos] = arr[i];
+                    arr[i] = minValue;
+                }
+            }
+        }
+        return arr;
+    }
+
+    /**
+     * Sorting Array
+     *
+     * @param arr
+     * @return sorted arr
+     */
+    public int[] insertionSort(int[] arr) {
+        int j;
+        for (int i = 1; i < arr.length; i++) {
+            int swap = arr[i];
+            for (j = i; j > 0 && swap < arr[j - 1]; j--) {
+                arr[j] = arr[j - 1];
+            }
+            arr[j] = swap;
+        }
+        return arr;
     }
 }

@@ -19,7 +19,7 @@ public class MathTest {
     @Before
     public void setUp() throws Exception {
         math = new Math();
-        commons=new Commons();
+        commons = new Commons();
     }
 
     @Test
@@ -192,7 +192,7 @@ public class MathTest {
     @Test
     public void reverseLinkedListTwoItems() {
         var node1 = new Commons.Node(5);
-        var node2 = new Commons.Node(10,node1);
+        var node2 = new Commons.Node(10, node1);
 
         Commons.Node result = Commons.reverseLinkedList(node2);
 
@@ -204,8 +204,8 @@ public class MathTest {
     @Test
     public void reverseLinkedListThreeItems() {
         var node1 = new Commons.Node(5);
-        var node2 = new Commons.Node(10,node1);
-        var node3 = new Commons.Node(15,node2);
+        var node2 = new Commons.Node(10, node1);
+        var node3 = new Commons.Node(15, node2);
 
         Commons.Node result = Commons.reverseLinkedList(node3);
 
@@ -261,4 +261,68 @@ public class MathTest {
         var second = List.of('c', 'd', 'a', 'e', 'd', 'g', 'b');
         assertThat(commons.isContainsSameCharacters(first, second), is(false));
     }
+
+    @Test
+    public void bubbleSort1() {
+        int[] arr = new int[]{5, 8, 4, 9, 10};
+        int[] check = new int[]{4, 5, 8, 9, 10};
+        assertThat(commons.bubbleSort(arr), is(check));
+    }
+
+    @Test
+    public void bubbleSort2() {
+        int[] arr = new int[]{5, 8, 4, 8, 9, 10};
+        int[] check = new int[]{4, 5, 8, 8, 9, 10};
+        assertThat(commons.bubbleSort(arr), is(check));
+    }
+
+    @Test
+    public void bubbleSort3() {
+        int[] arr = new int[]{};
+        int[] check = new int[]{};
+        assertThat(commons.bubbleSort(arr), is(check));
+    }
+
+    @Test
+    public void selectionSort1() {
+        int[] arr = new int[]{5, 8, 4, 9, 10};
+        int[] check = new int[]{4, 5, 8, 9, 10};
+        assertThat(commons.selectionSort(arr), is(check));
+    }
+
+    @Test
+    public void selectionSort2() {
+        int[] arr = new int[]{5, 8, 4, 8, 9, 10};
+        int[] check = new int[]{4, 5, 8, 8, 9, 10};
+        assertThat(commons.selectionSort(arr), is(check));
+    }
+
+    @Test
+    public void selectionSort3() {
+        int[] arr = new int[]{};
+        int[] check = new int[]{};
+        assertThat(commons.selectionSort(arr), is(check));
+    }
+
+    @Test
+    public void  insertionSort1() {
+        int[] arr = new int[]{5, 8, 4, 9, 10};
+        int[] check = new int[]{4, 5, 8, 9, 10};
+        assertThat(commons.insertionSort(arr), is(check));
+    }
+
+    @Test
+    public void insertionSort2() {
+        int[] arr = new int[]{5, 8, 4, 8, 9, 10};
+        int[] check = new int[]{4, 5, 8, 8, 9, 10};
+        assertThat(commons.insertionSort(arr), is(check));
+    }
+
+    @Test
+    public void insertionSort3() {
+        int[] arr = new int[]{};
+        int[] check = new int[]{};
+        assertThat(commons.insertionSort(arr), is(check));
+    }
+
 }
