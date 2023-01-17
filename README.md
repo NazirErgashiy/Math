@@ -18,4 +18,7 @@
 5. checkBracketsCorrectness returns true if <{()}> else <}>(
 6. maximumNumberOfUsers finds maximum number of users which watched stream
 7. isContainsSameCharacters compares two lists 
-8. [Code location](src/main/java/mathFunctions/Commons.java)
+8. bubbleSort **_Wikipedia_** link https://en.wikipedia.org/wiki/Bubble_sort
+9. selectionSort **_Wikipedia_** link https://en.wikipedia.org/wiki/Selection_sort
+10. insertionSort **_Wikipedia_** link https://en.wikipedia.org/wiki/Insertion_sort
+11. [Code location](src/main/java/mathFunctions/Commons.java)
